@@ -102,7 +102,6 @@ figure {
   overflow: hidden; }
   @media (min-width: 992px) {
     .media-box {
-      min-height: 85vh;
       height: 100%; } }
 
 .media-box img {
@@ -449,9 +448,16 @@ a.ctc {
           text-align: left; }
           .hero .row div:first-of-type {
             order: 1; } }
-    @media (max-width: 992px) {
-      .hero .row .media-box {
-        min-height: 80vh; } }
+    .hero .row figure.media-wrap {
+      height: 50vh;
+      max-height: 800px;
+      min-height: 300px; }
+      @media (min-width: 768px) {
+        .hero .row figure.media-wrap {
+          min-height: 600px; } }
+      @media (min-width: 992px) {
+        .hero .row figure.media-wrap .media-box {
+          height: 100%; } }
     .hero .row .hero-intro {
       padding: 8% 4% 4%;
       position: relative;
@@ -488,7 +494,10 @@ a.ctc {
           position: absolute;
           top: 0;
           left: 0;
-          width: 100%; }
+          width: 100%;
+          fill: none;
+          stroke-width: 5px;
+          stroke: #c31e22; }
           .hero .row .bottle a figure svg path {
             transition-property: all;
             transition-duration: 0.5s;
@@ -583,12 +592,9 @@ a.ctc {
               transition-timing-function: ease-in-out; }
             .pods div[class^="container"] .row div.pods-wrapper .row .pod figure:hover p {
               fill: #2d2929; }
-    .pods div[class^="container"] .row div.branding.bg-img {
-      background-image: url("../img/product-01.jpg");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: cover;
-      min-height: 50vh; }
+    .pods div[class^="container"] .row div.branding figure.media-wrap {
+      height: 100%;
+      max-height: 800px; }
 
 .products {
   padding: 10% 0;
@@ -702,8 +708,7 @@ a.ctc {
       height: 100%; }
     .testimonials div[class^="container"] .row .row .bg-img figure {
       width: 100%;
-      height: 100%;
-      min-height: 60vh; }
+      height: 100%; }
     .testimonials div[class^="container"] .row .row .reveal {
       overflow: hidden; }
     .testimonials div[class^="container"] .row .row .testimonial {
@@ -717,7 +722,7 @@ a.ctc {
         padding: 8%;
         text-align: center;
         background-color: #c31e22;
-        min-height: 50vh;
+        min-height: 40vh;
         justify-content: center;
         display: flex;
         flex-direction: column; }
@@ -727,6 +732,9 @@ a.ctc {
         @media (min-width: 1240px) {
           .testimonials div[class^="container"] .row .row .testimonial div {
             min-height: 100vh; } }
+        @media (min-width: 1366px) and (max-width: 1367px) {
+          .testimonials div[class^="container"] .row .row .testimonial div {
+            min-height: 50vh; } }
       .testimonials div[class^="container"] .row .row .testimonial figure svg {
         max-width: 50px;
         margin-bottom: 20px;
@@ -736,6 +744,11 @@ a.ctc {
       @media (min-width: 992px) {
         .testimonials div[class^="container"] .row .row > div {
           margin-bottom: 0; } }
+    .testimonials div[class^="container"] .row .row .bg-img {
+      min-height: 50vh; }
+      @media (min-width: 768px) {
+        .testimonials div[class^="container"] .row .row .bg-img {
+          min-height: 0; } }
     .testimonials div[class^="container"] .row .row:first-of-type .bg-img:first-of-type {
       background-image: url("../img/product-04.jpg");
       background-repeat: no-repeat;

@@ -1,5 +1,5 @@
 console.clear();
-gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 /////---------- Navigation
 //////hamburger and menu changes/////
@@ -118,39 +118,8 @@ ScrollTrigger.matchMedia({
 
 
     /////////////////hero arrows /////////////////////////
-    gsap.set(".arrow-wrap path",{
-      stroke:'#f1353d',
-      strokeWidth:5,
-      fill:'none',
-      strokeLinecap:'round',
-      strokeMiterlimit:10,
-    })
 
-    let arrows = gsap.timeline({delay:0.5, start:'top top'})
 
-    arrows.from('.arrow-wrap .stem', {
-      drawSVG: '0% 0%',
-      ease: "none",
-      opacity:0,
-      duration:1,
-      stagger:0.7,
-    },0);
-
-    arrows.from('.arrow-wrap .cap', {
-      drawSVG: '50% 50%',
-      ease: "none",
-      opacity:0,
-      duration:0.5,
-      stagger:0.7
-    },0.8);
-
-    arrows.from('.arrow', {
-      delay:2,
-      scale:1.25,
-      repeat:-1,
-      yoyo:true,
-      transformOrigin:'50% 50%',
-    },2);
     
     //////////////////////////////////////////
 

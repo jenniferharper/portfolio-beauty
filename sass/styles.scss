@@ -119,7 +119,6 @@ figure{
   width: 100%;
   overflow: hidden;
   @media (min-width:992px){
-   min-height:85vh;
    height:100%;
   }
 } 
@@ -494,11 +493,20 @@ margin-bottom: 20px;
       }
     } 
 
-    .media-box{
-      @media (max-width:992px){
-        min-height:80vh;  
+    figure.media-wrap{
+      height:50vh;
+      max-height: 800px;
+      min-height: 300px;
+      @media (min-width:768px){
+        min-height: 600px; 
+      }
+      .media-box{
+        @media (min-width:992px){
+          height: 100%;  
+        }
       }
     }
+
 
     .hero-intro{
       padding:$md $sm $sm;
@@ -541,7 +549,9 @@ margin-bottom: 20px;
             top:0;
             left: 0;
             width: 100%;
-            // svg styled in js
+            fill:none;
+            stroke-width: 5px;
+            stroke:$secondary-dark;
             path{
               @include transition;
             }
@@ -654,9 +664,10 @@ margin-bottom: 20px;
         }
       }
       div.branding{
-        &.bg-img{
-          @include bg-img(url("../img/product-01.jpg"));
-          min-height: 50vh;
+        figure.media-wrap{
+          height:100%;
+          max-height: 800px;
+
         }
       }
     }     
@@ -816,7 +827,7 @@ margin-bottom: 20px;
           figure{
             width: 100%;
             height: 100%;
-            min-height: 60vh;
+            // min-height: 60vh;
           }
         }   
         .reveal{
@@ -834,18 +845,25 @@ margin-bottom: 20px;
             padding: $md;
             text-align: center;
             background-color: $secondary-dark;        
-            min-height: 50vh;
+            min-height: 40vh;
             justify-content: center;
             display: flex;
             flex-direction: column;
+            
             @media (min-width:992px){
               margin:0 10px
             }
+
             @media (min-width:1240px){
               min-height: 100vh;
             }
+            @media (min-width:1366px) and (max-width:1367px){
+              min-height: 50vh;
+            }
+
           }
           figure{
+
             svg{
               max-width:50px;
               margin-bottom: 20px;
@@ -857,6 +875,12 @@ margin-bottom: 20px;
           margin-bottom:20px;
           @media (min-width:992px){
             margin-bottom:0
+          }
+        }
+        .bg-img{
+          min-height:50vh;
+          @media (min-width:768px){
+            min-height: 0;
           }
         }
       }
