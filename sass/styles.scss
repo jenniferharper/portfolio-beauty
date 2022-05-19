@@ -467,7 +467,7 @@ margin-bottom: 20px;
 	position: relative;
   .row{
     align-items: center;
-    padding: $sm $sm $md;
+    padding: $md $sm ;
     margin-top:130px;
     @media (min-width:992px){
       margin-top:30px;
@@ -494,7 +494,7 @@ margin-bottom: 20px;
     } 
 
     figure.media-wrap{
-      height:50vh;
+      height: 100vh;
       max-height: 800px;
       min-height: 300px;
       @media (min-width:768px){

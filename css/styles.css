@@ -428,7 +428,7 @@ a.ctc {
   position: relative; }
   .hero .row {
     align-items: center;
-    padding: 4% 4% 8%;
+    padding: 8% 4%;
     margin-top: 130px; }
     @media (min-width: 992px) {
       .hero .row {
@@ -449,7 +449,7 @@ a.ctc {
           .hero .row div:first-of-type {
             order: 1; } }
     .hero .row figure.media-wrap {
-      height: 50vh;
+      height: 100vh;
       max-height: 800px;
       min-height: 300px; }
       @media (min-width: 768px) {
