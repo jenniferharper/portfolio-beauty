@@ -956,9 +956,12 @@ margin-bottom: 20px;
       }
       ul.socials{
         margin-top:20px;
-          li{padding: 0 40px 0 0;}
-          @media (min-width:768px){
+        li{padding: 0 20px;
+        }
+        @media (min-width:768px){
           justify-content: flex-start;
+          li{padding: 0 40px 0 0;
+          }
         }
       }
     }

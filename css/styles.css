@@ -817,9 +817,11 @@ a.ctc {
     .cta .row div ul.socials {
       margin-top: 20px; }
       .cta .row div ul.socials li {
-        padding: 0 40px 0 0; }
+        padding: 0 20px; }
       @media (min-width: 768px) {
         .cta .row div ul.socials {
-          justify-content: flex-start; } }
+          justify-content: flex-start; }
+          .cta .row div ul.socials li {
+            padding: 0 40px 0 0; } }
 
 /*# sourceMappingURL=styles.css.map */
