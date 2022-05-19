@@ -97,7 +97,7 @@ figure {
 
 .media-box {
   position: relative;
-  height: 50vh;
+  height: 100%;
   width: 100%;
   overflow: hidden; }
   @media (min-width: 992px) {
