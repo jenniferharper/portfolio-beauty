@@ -596,6 +596,13 @@ a.ctc {
       height: 100%;
       max-height: 800px; }
 
+.branding.bsylvia figure.media-wrap {
+  height: 50vh;
+  max-height: 800px; }
+  @media (min-width: 992px) {
+    .branding.bsylvia figure.media-wrap {
+      height: 100vh; } }
+
 .products {
   padding: 10% 0;
   text-align: center;

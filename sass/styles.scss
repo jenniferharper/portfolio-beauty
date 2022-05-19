@@ -674,6 +674,18 @@ margin-bottom: 20px;
   }
 }
 
+.branding.bsylvia{
+  figure.media-wrap{
+    height:50vh;
+    max-height: 800px;
+    @media (min-width:992px){
+      height:100vh;
+    }
+  }
+}
+
+
+
 ////////////////////////////////////////////////
 .products{
   padding:$lg 0;

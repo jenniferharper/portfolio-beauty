@@ -83,22 +83,33 @@ ScrollTrigger.matchMedia({
   "all": function() {
 
 
-    // //background image amination
-    gsap.set('.zoom', {scale:1.5, transformOrigin:'50% 50%'},0);	
-    const zoom = document.querySelectorAll('.zoom');
+    zoom()
+    function zoom(){
+      gsap.set('.zoom', {scale:2, transformOrigin:'50% 50%'},0);
+      const section = document.querySelectorAll('.zoom');
 
-    zoom.forEach((section, index) => {
-      gsap.to(zoom, {
-        scale:1,
-        ease:Power1.easeInOut,
-        duration:1,
-        scrollTrigger: {
-          trigger: section,
+       section.forEach((section, index) => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
             start: 'top bottom-=200',
             toggleActions: 'play none none none',
-        }
-      });  
-    })
+          }
+        });
+
+        tl
+        .to(section,2, {scale:1, ease:Power1.easeInOut,})
+
+
+        ScrollTrigger.create({
+          trigger: section,
+          id: index+1,
+          start: 'top center',
+          toggleActions: 'play none none reverse',
+          animation:tl,
+        })    
+      })
+    }
 
       // //background image amination
       gsap.set('.zoom-other', {backgroundSize:'150%', transformOrigin:'50% 50%'},0);
